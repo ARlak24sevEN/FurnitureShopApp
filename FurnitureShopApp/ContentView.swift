@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var search :String = ""
     var body: some View {
         ZStack{
             Color("Bg")
@@ -15,6 +16,26 @@ struct ContentView: View {
             VStack{
                 AppBarView()
                 TagLineView()
+                HStack{
+                    HStack {
+                        Image("Search")
+                        TextField("Search furniture", text: $search)
+                    }
+                    .padding(.all,20)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .padding(.trailing)
+                    
+                    Button(action: {}){
+                        Image("Search")
+                            .padding(.all,20)
+                            .background(Color("Primary"))
+                            .cornerRadius(10)
+                    }
+                    
+                }
+                .padding(.horizontal)
+
             }
         }
     }
@@ -40,8 +61,8 @@ struct AppBarView: View {
                     .frame(width: 42, height: 42)
                     .cornerRadius(10)
             }
+            .padding(.horizontal)
         }
-        .padding(.horizontal)
     }
 }
 
