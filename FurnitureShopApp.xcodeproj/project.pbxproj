@@ -19,6 +19,8 @@
 		970CECEE29F9837F00E557CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		970CECF029F9838000E557CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		970CECF329F9838000E557CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		970CECFD29F9879A00E557CA /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		970CECFE29F9879A00E557CA /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		970CECEB29F9837F00E557CA /* FurnitureShopApp */ = {
 			isa = PBXGroup;
 			children = (
+				970CECFC29F9877F00E557CA /* Fonts */,
 				970CECEC29F9837F00E557CA /* FurnitureShopAppApp.swift */,
 				970CECEE29F9837F00E557CA /* ContentView.swift */,
 				970CECF029F9838000E557CA /* Assets.xcassets */,
@@ -65,6 +68,15 @@
 				970CECF329F9838000E557CA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		970CECFC29F9877F00E557CA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				970CECFD29F9879A00E557CA /* PlayfairDisplay-Bold.ttf */,
+				970CECFE29F9879A00E557CA /* PlayfairDisplay-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
