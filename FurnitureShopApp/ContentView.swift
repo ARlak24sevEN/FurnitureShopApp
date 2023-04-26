@@ -14,7 +14,7 @@ struct ContentView: View {
                 .ignoresSafeArea()
             VStack{
                 AppBarView()
-                Text("Fine the Best Furniture")
+                TagLineView()
             }
         }
     }
@@ -42,5 +42,16 @@ struct AppBarView: View {
             }
         }
         .padding(.horizontal)
+    }
+}
+
+struct TagLineView: View {
+    var body: some View {
+        Text("Fine the \nBest ")
+            .foregroundColor(Color("Primary"))
+            .font(.custom("PlayfairDisplay-Regular", size: 28))
+        + Text("Furniture!")
+            .foregroundColor(Color("Primary"))
+            .font(.custom("PlayfairDisplay-Bold", size: 28))
     }
 }
