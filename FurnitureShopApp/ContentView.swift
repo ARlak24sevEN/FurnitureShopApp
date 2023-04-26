@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var search :String = ""
     var body: some View {
         ZStack{
             Color("Bg")
@@ -16,25 +15,7 @@ struct ContentView: View {
             VStack{
                 AppBarView()
                 TagLineView()
-                HStack{
-                    HStack {
-                        Image("Search")
-                        TextField("Search furniture", text: $search)
-                    }
-                    .padding(.all,20)
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    .padding(.trailing)
-                    
-                    Button(action: {}){
-                        Image("Search")
-                            .padding(.all,20)
-                            .background(Color("Primary"))
-                            .cornerRadius(10)
-                    }
-                    
-                }
-                .padding(.horizontal)
+                SearchAndScanView()
 
             }
         }
@@ -74,5 +55,32 @@ struct TagLineView: View {
         + Text("Furniture!")
             .foregroundColor(Color("Primary"))
             .font(.custom("PlayfairDisplay-Bold", size: 28))
+    }
+}
+
+struct SearchAndScanView: View {
+    @State private var search :String = ""
+    var body: some View {
+        HStack{
+            HStack {
+                Image("Search")
+                TextField("Search furniture", text: $search)
+            }
+            .padding(.all,20)
+            .background(Color.white)
+            .cornerRadius(10)
+            .padding(.trailing)
+            
+            Button(action: {}){
+                Image(systemName: "qrcode.viewfinder")
+                    .font(.system(size: 40))
+                    .foregroundColor(Color.white)
+                    .padding(.all,9)
+                    .background(Color("Primary"))
+                    .cornerRadius(10)
+            }
+            
+        }
+        .padding(.horizontal)
     }
 }
