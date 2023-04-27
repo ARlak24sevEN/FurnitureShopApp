@@ -37,7 +37,15 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .padding(.horizontal)
                 
-                ProductCardView()
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(0 ..< 4) { i in
+                            ProductCardView(image: Image("chair_\(i+1)"))
+                        }
+                        .padding(.trailing)
+                    }
+                    .padding(.leading)
+                }
                 
             }
         }
@@ -127,9 +135,10 @@ struct CategoryView: View {
 }
 
 struct ProductCardView: View {
+    let image : Image
     var body: some View {
         VStack {
-            Image("chair_1")
+            image
                 .resizable()
                 .frame(width: 210, height: 200)
                 .cornerRadius(20)
