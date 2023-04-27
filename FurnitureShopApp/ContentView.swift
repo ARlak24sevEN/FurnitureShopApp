@@ -32,7 +32,12 @@ struct ContentView: View {
                     }
                 }
                 
-                Text("")
+                Text("Popular")
+                    .font(.custom("PlayfairDisplay-Bold", size: 24))
+                    .fontWeight(.bold)
+                    .padding(.horizontal)
+                
+                ProductCardView()
                 
             }
         }
@@ -118,5 +123,33 @@ struct CategoryView: View {
             }
         }
         .padding(.trailing)
+    }
+}
+
+struct ProductCardView: View {
+    var body: some View {
+        VStack {
+            Image("chair_1")
+                .resizable()
+                .frame(width: 210, height: 200)
+                .cornerRadius(20)
+            Text("Luxury Swedian Chair")
+                .font(.title3)
+                .fontWeight(.bold)
+            
+            HStack{
+                ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+                    Image("star")
+                }
+                Spacer()
+                Text("$1299")
+                    .font(.title3)
+                    .fontWeight(.bold)
+            }
+        }
+        .frame(width: 210)
+        .padding()
+        .background(Color(.white))
+        .cornerRadius(20)
     }
 }
